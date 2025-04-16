@@ -14,14 +14,14 @@ function App() {
             title: "Project 1",
             description: "Game • Pose Detection",
             image: portfolio1,
-            link: "#", // Voeg een link toe naar het project
+            link: "#",
         },
 
         {
             id: 2,
             title: "Project 2",
             description: "Game Development • Unreal Engine",
-            image: portfolio2, // Zorg ervoor dat het pad klopt
+            image: portfolio2,
             link: "#",
         },
         {
@@ -98,9 +98,7 @@ function App() {
                 <div className="hero-content">
                     <h1 className="glitter-text">Britney Krabbendam</h1>
                     <p className="subtitle">Frontend Developer • Game Developer</p>
-                    <div className="pink-button">
-                        <span>Github</span>
-                    </div>
+
                 </div>
             </section>
 
@@ -117,7 +115,7 @@ function App() {
                 <div className="about-content">
                     <div className="about-text">
                         <p>
-                            Welcome to my early 2000's portfolio! I'm Britney Krabbendam, a 25-year old student. I’m currently studying Creative Media and Game Technologies at Hogeschool Rotterdam, where I’ve developed a strong foundation in frontend technologies, UI/UX design, and game development.
+                            Welcome to my portfolio! I'm Britney Krabbendam, a 25-year old student. I’m currently studying Creative Media and Game Technologies at Hogeschool Rotterdam, where I’ve developed a strong foundation in frontend technologies, UI/UX design, and game development.
                         </p>
                         <p>
                             When I'm not coding, I collect Pokémon plushies, listen to my favorite music, and go to the gym!
@@ -191,34 +189,12 @@ function App() {
                     </div>
                 </div>
                 <div className="contact-container">
-                    <div className="contact-form">
-                        <div className="form-group">
-                            <label htmlFor="name">Name:</label>
-                            <input type="text" id="name" className="form-input" />
-                        </div>
-                        <div className="form-group">
-                            <label htmlFor="email">Email:</label>
-                            <input type="email" id="email" className="form-input" />
-                        </div>
-                        <div className="form-group">
-                            <label htmlFor="message">Message:</label>
-                            <textarea id="message" className="form-textarea"></textarea>
-                        </div>
-                        <button className="submit-button">Send ♥</button>
-                    </div>
+
                     <div className="contact-info">
-                        <div className="info-item">
-                            <div className="info-icon">@</div>
-                            <div className="info-text">email@myportfolio.com</div>
-                        </div>
-                        <div className="info-item">
-                            <div className="info-icon">♥</div>
-                            <div className="info-text">Based in: Amsterdam, NL</div>
-                        </div>
+
                         <div className="social-links">
-                            <a href="#" className="social-link">GitHub</a>
-                            <a href="#" className="social-link">LinkedIn</a>
-                            <a href="#" className="social-link">CodePen</a>
+                            <a href="#https://github.com/Zoruasy" className="social-link">GitHub</a>
+                            <a href="#https://www.linkedin.com/in/britney-krabbendam-software-developer/" className="social-link">LinkedIn</a>
                         </div>
                     </div>
                 </div>
