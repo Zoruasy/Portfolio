@@ -84,9 +84,7 @@ function App() {
                     <ul>
                         <li><a href="#home" className="nav-link">Home</a></li>
                         <li><a href="#about" className="nav-link">About Me</a></li>
-                        <li><a href="#portfolio" className="nav-link">Portfolio</a></li>
-                        <li><a href="#skills" className="nav-link">Skills</a></li>
-                        <li><a href="#projects" className="nav-link">Projects</a></li>
+                        <li><a href="#portfolio" className="nav-link">Projects</a></li>
                         <li><a href="#contact" className="nav-link">Contact</a></li>
                     </ul>
                 </nav>
