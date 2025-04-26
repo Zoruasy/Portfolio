@@ -1,0 +1,239 @@
+/* ProjectDetail.css */
+.project-detail-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    color: #ffffff;
+}
+
+.back-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background-color: transparent;
+    border: 1px solid #2d8a30;
+    border-radius: 0.5rem;
+    color: #ffffff;
+    font-weight: 500;
+    margin-bottom: 2rem;
+    transition: all 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: rgba(45, 138, 48, 0.1);
+    transform: translateX(-5px);
+}
+
+.project-detail-header {
+    margin-bottom: 2.5rem;
+}
+
+.project-detail-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    background-image: linear-gradient(to right, #2d8a30, #4caf50);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.project-detail-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.project-detail-tag {
+    padding: 0.5rem 1rem;
+    background-color: #333333;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: white;
+}
+
+.project-detail-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+
+}
+
+
+
+/* Update de afbeeldingscontainer styling */
+.project-detail-image-container {
+    width: 100%;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    margin-bottom: 2rem;
+}
+
+.project-detail-image {
+    width: 100%;
+    position: relative;
+    background-color: #1e1e1e;
+    overflow: hidden;
+}
+
+/* Styling voor echte afbeeldingen */
+.project-detail-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+
+/* Verbeterde placeholder styling */
+.project-image-placeholder {
+    width: 100%;
+    min-height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(45deg, #1e1e1e, #2a2a2a);
+    color: #4caf50;
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding: 2rem;
+}
+
+/* Specifieke styling voor Pokémon afbeelding */
+.pokemon-image {
+    background: white;
+    padding: 0;
+}
+
+.pokemon-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.project-detail-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.project-detail-description h2 {
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #ffffff;
+}
+
+.project-detail-description h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 1.5rem 0 0.75rem;
+    color: #4caf50;
+}
+
+.project-detail-description p {
+    color: #e0e0e0;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+}
+
+.project-detail-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.project-detail-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.demo-link {
+    background-image: linear-gradient(to right, #2d8a30, #4caf50);
+    color: white;
+}
+
+.demo-link:hover {
+    box-shadow: 0 10px 15px -3px rgba(45, 138, 48, 0.25);
+    transform: translateY(-2px);
+}
+
+.code-link {
+    background-color: transparent;
+    border: 1px solid #2d8a30;
+    color: white;
+}
+
+.code-link:hover {
+    background-color: rgba(45, 138, 48, 0.1);
+}
+
+/* Loading spinner */
+.project-detail-loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 50vh;
+}
+
+.loading-spinner {
+    width: 50px;
+    height: 50px;
+    border: 4px solid rgba(45, 138, 48, 0.1);
+    border-left-color: #4caf50;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 1rem;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.project-not-found {
+    text-align: center;
+    padding: 3rem 0;
+}
+
+.project-not-found h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #ffffff;
+}
+
+.project-not-found p {
+    color: #e0e0e0;
+    margin-bottom: 2rem;
+}
+
+/* mobiel */
+@media (min-width: 768px) {
+    .project-detail-content {
+        grid-template-columns: 1fr;
+    }
+
+    .project-image-placeholder {
+        min-height: 300px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .project-detail-content {
+        grid-template-columns: 1fr 1fr;
+        gap: 2.5rem;
+    }
+
+    .project-detail-image-container {
+        margin-bottom: 0;
+    }
+}
