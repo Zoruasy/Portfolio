@@ -701,7 +701,7 @@ function App() {
             description: "A pose detection game trained on own data... who will win?",
             tags: ["React", "HTML", "CSS"],
             demoUrl: "#",
-            codeUrl: "#https://github.com/Zoruasy/PosedetectionGame",
+            codeUrl: "https://github.com/Zoruasy/PosedetectionGame",
         },
         {
             id: 2,
@@ -709,7 +709,7 @@ function App() {
             description: "A website where you can add, edit, delete your Pokémon from a database server..",
             tags: ["React", "Vite", "Tailwind"],
             demoUrl: "#",
-            codeUrl: "#https://github.com/Zoruasy/Frontend-REACT",
+            codeUrl: "https://github.com/Zoruasy/Frontend-REACT",
         },
         {
             id: 3,
@@ -717,7 +717,7 @@ function App() {
             description: "A vacancy website, with a database, interface and user authentication made with other students.",
             tags: ["Laravel", "HTML", "CSS"],
             demoUrl: "#",
-            codeUrl: "#https://github.com/justalana/tle1-ontwerpen",
+            codeUrl: "https://github.com/justalana/tle1-ontwerpen",
         },
         {
             id: 4,
