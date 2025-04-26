@@ -746,30 +746,31 @@ function App() {
     // Social media links
     const socialLinks = ["github", "linkedin"]
 
-    return (
-        <Router>
-            <Routes>
-                <Route
-                    path="/"
-                    element={
-                        <HomePage
-                            projects={projects}
-                            technicalSkills={technicalSkills}
-                            personalSkills={personalSkills}
-                            personalInfo={personalInfo}
-                            socialLinks={socialLinks}
-                        />
-                    }
-                />
-                <Route path="/project/:id" element={<ProjectDetail projects={projects} />} />
-                <Route path="/pokemon" element={<Pokemon />} />
-                <Route path="/posegame" element={<Posegame />} />
-                <Route path="/vacancy" element={<Vacancyweb />} />
-                <Route path="/UEVR" element={<UEVR />} />
-                <Route path="/Backrooms" element={<Backrooms />} />
-            </Routes>
-        </Router>
-    )
-}
+    function App() {
+        return (
+            <Router basename="/portfolio">
+                <Routes>
+                    <Route
+                        path="/"
+                        element={
+                            <HomePage
+                                projects={projects}
+                                technicalSkills={technicalSkills}
+                                personalSkills={personalSkills}
+                                personalInfo={personalInfo}
+                                socialLinks={socialLinks}
+                            />
+                        }
+                    />
+                    <Route path="/project/:id" element={<ProjectDetail projects={projects} />} />
+                    <Route path="/pokemon" element={<Pokemon />} />
+                    <Route path="/posegame" element={<Posegame />} />
+                    <Route path="/vacancy" element={<Vacancyweb />} />
+                    <Route path="/UEVR" element={<UEVR />} />
+                    <Route path="/Backrooms" element={<Backrooms />} />
+                </Routes>
+            </Router>
+        );
+    }}
 
 export default App

@@ -2,19 +2,18 @@
   "dependencies": {
     "framer-motion": "^12.9.2",
     "lucide-react": "^0.503.0",
+    "react-router-dom": "^7.5.2",
     "vite": "^6.3.3"
   },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "predeploy": "vite build",
+    "deploy": "gh-pages -d dist"
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^4.4.1",
-    "gh-pages": "^6.3.0",
-    "deploy": "gh-pages -d dist"
+    "gh-pages": "^6.3.0"
   },
-  "homepage": "https://zoruasy.github.io/portfolio/",
-
-
+  "homepage": "https://zoruasy.github.io/portfolio/"
 }
