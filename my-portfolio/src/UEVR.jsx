@@ -27,7 +27,7 @@ const VRBackrooms = () => {
                 <div className="project-detail-image-container">
                     <div className="project-detail-image">
                         <div className="project-detail-image">
-                            <img src="src/img/portfolio4.png"/>
+                            <img src="portfolio4.png"/>
                         </div>
                     </div>
                 </div>
