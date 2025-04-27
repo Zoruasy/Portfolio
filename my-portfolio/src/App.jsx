@@ -1,5 +1,6 @@
 
 import React from "react"
+import { useEffect } from "react"
 
 import { HashRouter as Router, Routes, Route, Link } from "react-router-dom"
 import { useState } from "react"
@@ -10,6 +11,7 @@ import Posegame from "./PoseGame.jsx"
 import Vacancyweb from "./Vacancyweb.jsx"
 import UEVR from "./UEVR.jsx"
 import Backrooms from "./Backrooms.jsx"
+
 
 // Icons
 const Icons = {
@@ -323,7 +325,6 @@ function HomePage({ projects, technicalSkills, personalSkills, personalInfo, soc
     return (
         <>
             <SkipLink />
-
             <main className="min-h-screen">
                 {/* Header */}
                 <header className="header" role="banner">
@@ -348,13 +349,24 @@ function HomePage({ projects, technicalSkills, personalSkills, personalInfo, soc
                         <ul className="nav-list">
                             {["About", "Projects", "Skills", "Contact"].map((item) => (
                                 <li key={item}>
-                                    <a href={`#${item.toLowerCase()}`} className="nav-link">
+                                    <a
+                                        href={`#${item.toLowerCase()}`}
+                                        className="nav-link"
+                                        onClick={(e) => {
+                                            e.preventDefault();
+                                            const section = document.getElementById(item.toLowerCase());
+                                            if (section) {
+                                                section.scrollIntoView({ behavior: "smooth" });
+                                            }
+                                        }}
+                                    >
                                         {item}
                                     </a>
                                 </li>
                             ))}
                         </ul>
                     </nav>
+
                 </header>
 
                 {/* Mobile Menu */}
@@ -406,13 +418,21 @@ function HomePage({ projects, technicalSkills, personalSkills, personalInfo, soc
                         </p>
 
                         <div className="hero-buttons">
-                            <a href="#contact" className="primary-button">
+                            <a href="#/contact" className="primary-button"
+                                onClick={(e) => {
+                                e.preventDefault();
+                                document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+                            }}>
                 <span className="button-content">
                   Contact Me
                   <Icons.ArrowRight className="button-icon" />
                 </span>
                             </a>
-                            <a href="#projects" className="secondary-button">
+                            <a href="#projects" className="secondary-button"
+                               onClick={(e) => {
+                                   e.preventDefault();
+                                   document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });
+                               }}>
                                 View Work
                             </a>
                         </div>
@@ -623,18 +643,35 @@ function HomePage({ projects, technicalSkills, personalSkills, personalInfo, soc
                             </div>
 
                             <div className="footer-links">
-                                <a href="#About" className="footer-link" aria-label="Go to About section">
+                                <a href="#about" onClick={(e) => {
+                                    e.preventDefault();
+                                    document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' });
+                                }}>
                                     About
                                 </a>
-                                <a href="#Projects" className="footer-link" aria-label="Go to Projects section">
+
+                                <a href="#projects" onClick={(e) => {
+                                    e.preventDefault();
+                                    document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });
+                                }}>
                                     Projects
                                 </a>
-                                <a href="#Skills" className="footer-link" aria-label="Go to Skills section">
+
+                                <a href="#skills" onClick={(e) => {
+                                    e.preventDefault();
+                                    document.getElementById('skills')?.scrollIntoView({ behavior: 'smooth' });
+                                }}>
                                     Skills
                                 </a>
-                                <a href="#Contact" className="footer-link" aria-label="Go to Contact section">
+
+                                <a href="#contact" onClick={(e) => {
+                                    e.preventDefault();
+                                    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+                                }}>
                                     Contact
                                 </a>
+
+
                             </div>
                         </div>
 
@@ -743,6 +780,19 @@ const personalInfo = [
 const socialLinks = ["github", "linkedin"]
 
 function App() {
+    useEffect(() => {
+        const hash = window.location.hash
+        if (hash) {
+            const id = hash.replace("#", "")
+            const element = document.getElementById(id)
+            if (element) {
+                setTimeout(() => {
+                    element.scrollIntoView({ behavior: "smooth" })
+                }, 0)
+            }
+        }
+    }, [])
+
     return (
         <Router>
             <Routes>
@@ -763,7 +813,7 @@ function App() {
                 <Route path="/posegame" element={<Posegame />} />
                 <Route path="/vacancy" element={<Vacancyweb />} />
                 <Route path="/UEVR" element={<UEVR />} />
-                <Route path="/Backrooms" element={<Backrooms />} />
+                <Route path="/backrooms" element={<Backrooms />} />
             </Routes>
         </Router>
     )

@@ -58,7 +58,7 @@ const VRBackrooms = () => {
                         <h3>Team Collaboration</h3>
                         <p>
                             This project was developed collaboratively with other students, with certain tasks divided. My
-                            contributions was focused on environment design, VR interaction systems, making a jumpscare video and creating interactive posters.
+                            contributions was focused on environment design, making a jumpscare video and creating interactive posters.
 
                         </p>
                     </div>
