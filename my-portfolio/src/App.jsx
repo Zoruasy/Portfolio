@@ -455,9 +455,6 @@ function HomePage({ projects, technicalSkills, personalSkills, personalInfo, soc
                                 </div>
 
                                 <div className="about-actions">
-                                    <a href="/resume.pdf" className="resume-button" aria-label="Download my resume">
-                                        Download CV
-                                    </a>
                                 </div>
                             </div>
                         </div>
