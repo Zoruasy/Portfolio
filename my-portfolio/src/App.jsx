@@ -1,7 +1,7 @@
 
+import { HashRouter as Router, Routes, Route, Link } from "react-router-dom";
 import React from "react"
 import { useState } from "react"
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom"
 import TypewriterLoop from "./TypewriterLoop"
 import ProjectDetail from "./ProjectDetail"
 import Pokemon from "./pokemon"
