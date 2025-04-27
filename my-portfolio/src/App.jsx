@@ -407,7 +407,7 @@ function HomePage({ projects, technicalSkills, personalSkills, personalInfo, soc
                         </p>
 
                         <div className="hero-buttons">
-                            <a href="#contact" className="primary-button">
+                            <a href="contact" className="primary-button">
                 <span className="button-content">
                   Contact Me
                   <Icons.ArrowRight className="button-icon" />
