@@ -624,16 +624,16 @@ function HomePage({ projects, technicalSkills, personalSkills, personalInfo, soc
                             </div>
 
                             <div className="footer-links">
-                                <a href="#about" className="footer-link" aria-label="Go to About section">
+                                <a href="#About" className="footer-link" aria-label="Go to About section">
                                     About
                                 </a>
-                                <a href="#projects" className="footer-link" aria-label="Go to Projects section">
+                                <a href="#Projects" className="footer-link" aria-label="Go to Projects section">
                                     Projects
                                 </a>
-                                <a href="#skills" className="footer-link" aria-label="Go to Skills section">
+                                <a href="#Skills" className="footer-link" aria-label="Go to Skills section">
                                     Skills
                                 </a>
-                                <a href="#contact" className="footer-link" aria-label="Go to Contact section">
+                                <a href="#Contact" className="footer-link" aria-label="Go to Contact section">
                                     Contact
                                 </a>
                             </div>
