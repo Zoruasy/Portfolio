@@ -1,6 +1,8 @@
+"use client"
 
-import { HashRouter as Router, Routes, Route, Link } from "react-router-dom";
 import React from "react"
+
+import { HashRouter as Router, Routes, Route, Link } from "react-router-dom"
 import { useState } from "react"
 import TypewriterLoop from "./TypewriterLoop"
 import ProjectDetail from "./ProjectDetail"
@@ -650,127 +652,125 @@ function HomePage({ projects, technicalSkills, personalSkills, personalInfo, soc
     )
 }
 
+// Technical skills data
+const technicalSkills = [
+    { name: "HTML", icon: "H", level: 90 },
+    { name: "CSS", icon: "C", level: 80 },
+    { name: "JavaScript + React", icon: "JS", level: 75 },
+    { name: "Unreal Engine", icon: "U", level: 60 },
+    { name: "Blender", icon: "B", level: 35 },
+    { name: "Tailwind CSS", icon: "T", level: 65 },
+    { name: "Git", icon: "G", level: 80 },
+    { name: "Figma", icon: "F", level: 65 },
+    { name: "PHP + Laravel", icon: "P", level: 65 },
+]
+
+// Personal skills data
+const personalSkills = [
+    {
+        name: "Problem Solving",
+        description: "Analytical thinker and good at finding creative solutions to complex problems.",
+    },
+    {
+        name: "Communication",
+        description: "Clear and effective communicator, able to explain technical concepts to non-technical audiences.",
+    },
+    {
+        name: "Teamwork",
+        description: "Collaborative team player who thrives in group settings and contributes positively to team dynamics.",
+    },
+    {
+        name: "Time Management",
+        description: "Excellent at prioritizing tasks and meeting deadlines, even under pressure.",
+    },
+    {
+        name: "Adaptability",
+        description: "Quick to learn new technologies and adapt to changing project requirements.",
+    },
+    {
+        name: "Creativity",
+        description: "Innovative thinker who brings fresh perspectives and ideas to projects.",
+    },
+]
+
+// Projects data
+const projects = [
+    {
+        id: 1,
+        title: "Pose Detection Game",
+        description: "A pose detection game trained on own data... who will win?",
+        tags: ["React", "HTML", "CSS"],
+        demoUrl: "#",
+        codeUrl: "https://github.com/Zoruasy/PosedetectionGame",
+    },
+    {
+        id: 2,
+        title: "Database Pokémon website",
+        description: "A website where you can add, edit, delete your Pokémon from a database server..",
+        tags: ["React", "Vite", "Tailwind"],
+        demoUrl: "#",
+        codeUrl: "https://github.com/Zoruasy/Frontend-REACT",
+    },
+    {
+        id: 3,
+        title: "Laravel Vacancy Website",
+        description: "A vacancy website, with a database, interface and user authentication made with other students.",
+        tags: ["Laravel", "HTML", "CSS"],
+        demoUrl: "#",
+        codeUrl: "https://github.com/justalana/tle1-ontwerpen",
+    },
+    {
+        id: 4,
+        title: "VR backrooms Game",
+        description: "VR backrooms-like game, made in Unreal Engine with other students.",
+        tags: ["Unreal Engine"],
+        demoUrl: "#",
+        codeUrl: "#",
+    },
+    {
+        id: 5,
+        title: "UE backrooms game",
+        description: "A Horror-backroom game made in Unreal Engine.",
+        tags: ["Unreal Engine"],
+        demoUrl: "#",
+    },
+]
+
+// Personal info data
+const personalInfo = [
+    { label: "Name", value: "Britney Krabbendam" },
+    { label: "Study", value: "Creative Media & Game Technologies" },
+    { label: "Location", value: "Schiedam, NL" },
+]
+
+// Social media links
+const socialLinks = ["github", "linkedin"]
+
 function App() {
-    // Technical skills data
-    const technicalSkills = [
-        { name: "HTML", icon: "H", level: 90 },
-        { name: "CSS", icon: "C", level: 80 },
-        { name: "JavaScript + React", icon: "JS", level: 75 },
-        { name: "Unreal Engine", icon: "U", level: 60 },
-        { name: "Blender", icon: "B", level: 35 },
-        { name: "Tailwind CSS", icon: "T", level: 65 },
-        { name: "Git", icon: "G", level: 80 },
-        { name: "Figma", icon: "F", level: 65 },
-        { name: "PHP + Laravel", icon: "P", level: 65 },
-    ]
+    return (
+        <Router>
+            <Routes>
+                <Route
+                    path="/"
+                    element={
+                        <HomePage
+                            projects={projects}
+                            technicalSkills={technicalSkills}
+                            personalSkills={personalSkills}
+                            personalInfo={personalInfo}
+                            socialLinks={socialLinks}
+                        />
+                    }
+                />
+                <Route path="/project/:id" element={<ProjectDetail projects={projects} />} />
+                <Route path="/pokemon" element={<Pokemon />} />
+                <Route path="/posegame" element={<Posegame />} />
+                <Route path="/vacancy" element={<Vacancyweb />} />
+                <Route path="/UEVR" element={<UEVR />} />
+                <Route path="/Backrooms" element={<Backrooms />} />
+            </Routes>
+        </Router>
+    )
+}
 
-    // Personal skills data
-    const personalSkills = [
-        {
-            name: "Problem Solving",
-            description: "Analytical thinker and good at finding creative solutions to complex problems.",
-        },
-        {
-            name: "Communication",
-            description: "Clear and effective communicator, able to explain technical concepts to non-technical audiences.",
-        },
-        {
-            name: "Teamwork",
-            description:
-                "Collaborative team player who thrives in group settings and contributes positively to team dynamics.",
-        },
-        {
-            name: "Time Management",
-            description: "Excellent at prioritizing tasks and meeting deadlines, even under pressure.",
-        },
-        {
-            name: "Adaptability",
-            description: "Quick to learn new technologies and adapt to changing project requirements.",
-        },
-        {
-            name: "Creativity",
-            description: "Innovative thinker who brings fresh perspectives and ideas to projects.",
-        },
-    ]
-
-    // Projects data
-    const projects = [
-        {
-            id: 1,
-            title: "Pose Detection Game",
-            description: "A pose detection game trained on own data... who will win?",
-            tags: ["React", "HTML", "CSS"],
-            demoUrl: "#",
-            codeUrl: "https://github.com/Zoruasy/PosedetectionGame",
-        },
-        {
-            id: 2,
-            title: "Database Pokémon website",
-            description: "A website where you can add, edit, delete your Pokémon from a database server..",
-            tags: ["React", "Vite", "Tailwind"],
-            demoUrl: "#",
-            codeUrl: "https://github.com/Zoruasy/Frontend-REACT",
-        },
-        {
-            id: 3,
-            title: "Laravel Vacancy Website",
-            description: "A vacancy website, with a database, interface and user authentication made with other students.",
-            tags: ["Laravel", "HTML", "CSS"],
-            demoUrl: "#",
-            codeUrl: "https://github.com/justalana/tle1-ontwerpen",
-        },
-        {
-            id: 4,
-            title: "VR backrooms Game",
-            description: "VR backrooms-like game, made in Unreal Engine with other students.",
-            tags: ["Unreal Engine"],
-            demoUrl: "#",
-            codeUrl: "#",
-        },
-        {
-            id: 5,
-            title: "UE backrooms game",
-            description: "A Horror-backroom game made in Unreal Engine.",
-            tags: ["Unreal Engine"],
-            demoUrl: "#",
-        },
-    ]
-
-    // Personal info data
-    const personalInfo = [
-        { label: "Name", value: "Britney Krabbendam" },
-        { label: "Study", value: "Creative Media & Game Technologies" },
-        { label: "Location", value: "Schiedam, NL" },
-    ]
-
-    // Social media links
-    const socialLinks = ["github", "linkedin"]
-
-    function App() {
-        return (
-            <Router basename="/my-portfolio">
-                <Routes>
-                    <Route
-                        path="/"
-                        element={
-                            <HomePage
-                                projects={projects}
-                                technicalSkills={technicalSkills}
-                                personalSkills={personalSkills}
-                                personalInfo={personalInfo}
-                                socialLinks={socialLinks}
-                            />
-                        }
-                    />
-                    <Route path="/project/:id" element={<ProjectDetail projects={projects} />} />
-                    <Route path="/pokemon" element={<Pokemon />} />
-                    <Route path="/posegame" element={<Posegame />} />
-                    <Route path="/vacancy" element={<Vacancyweb />} />
-                    <Route path="/UEVR" element={<UEVR />} />
-                    <Route path="/Backrooms" element={<Backrooms />} />
-                </Routes>
-            </Router>
-        );
-    }}
-
-export default App;
+export default App
