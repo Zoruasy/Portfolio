@@ -27,7 +27,7 @@ const PoseDetectionGame = () => {
                 <div className="project-detail-image-container">
                     <div className="project-detail-image">
                             <div className="project-detail-image">
-                                <img src="src/img/portfolio1.png"/>
+                                <img src="public/portfolio1.png"/>
                             </div>
                     </div>
                 </div>
