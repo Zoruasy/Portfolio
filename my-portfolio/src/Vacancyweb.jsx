@@ -27,7 +27,7 @@ const LaravelVacancy = () => {
                 <div className="project-detail-image-container">
                     <div className="project-detail-image">
                         <div className="project-detail-image">
-                            <img src="src/img/portfolio3.jpg"/>
+                            <img src="public/img/portfolio3.jpg"/>
                         </div>
                     </div>
                 </div>
