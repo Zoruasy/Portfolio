@@ -748,7 +748,7 @@ function App() {
 
     function App() {
         return (
-            <Router basename="/portfolio">
+            <Router basename="/my-portfolio">
                 <Routes>
                     <Route
                         path="/"
@@ -773,4 +773,4 @@ function App() {
         );
     }}
 
-export default App
+export default App;
