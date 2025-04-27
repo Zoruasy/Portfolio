@@ -1,8 +1,7 @@
 "use client"
 
 import React from "react"
-
-import { HashRouter as Router, Routes, Route, Link } from "react-router-dom"
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { useState } from "react"
 import TypewriterLoop from "./TypewriterLoop"
 import ProjectDetail from "./ProjectDetail"
@@ -407,7 +406,7 @@ function HomePage({ projects, technicalSkills, personalSkills, personalInfo, soc
                         </p>
 
                         <div className="hero-buttons">
-                            <a href="contact" className="primary-button">
+                            <a href="#contact" className="primary-button">
                 <span className="button-content">
                   Contact Me
                   <Icons.ArrowRight className="button-icon" />
