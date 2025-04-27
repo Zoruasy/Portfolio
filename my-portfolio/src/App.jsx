@@ -1,9 +1,6 @@
-"use client"
 
-import React from "react"
-
+import React, { useState } from "react"
 import { HashRouter as Router, Routes, Route, Link } from "react-router-dom"
-import { useState } from "react"
 import TypewriterLoop from "./TypewriterLoop"
 import ProjectDetail from "./ProjectDetail"
 import Pokemon from "./Pokemon"
@@ -12,7 +9,7 @@ import Vacancyweb from "./Vacancyweb.jsx"
 import UEVR from "./UEVR.jsx"
 import Backrooms from "./Backrooms.jsx"
 
-// Icons
+
 const Icons = {
     Github: ({ size = 24, className = "" }) => (
         <svg
@@ -178,11 +175,11 @@ function SkipLink() {
         setIsVisible(false)
     }
 
-    // return (
-    //     <a href="#about" onClick={handleClick} className={`skip-link ${isVisible ? "visible" : ""}`}>
-    //         Skip to main content
-    //     </a>
-    // )
+    return (
+        <a href="#about" onClick={handleClick} className={`skip-link ${isVisible ? "visible" : ""}`}>
+            Skip to main content
+        </a>
+    )
 }
 
 // SkillCard Component
@@ -252,9 +249,9 @@ function PersonalSkillCard({ skill }) {
 function ProjectCard({ project }) {
     const [isHovered, setIsHovered] = useState(false)
 
-    // Bepaal de juiste link op basis van project ID
+    // Determine the correct link based on project ID
     const getProjectLink = () => {
-        // Stuur elk project naar zijn eigen specifieke pagina
+        // Send each project to its own specific page
         switch (project.id) {
             case 1:
                 return "/PoseGame"
@@ -312,6 +309,24 @@ function ProjectCard({ project }) {
     )
 }
 
+// ScrollToSection component for handling in-page navigation
+function ScrollToSection({ children, sectionId, className, onClick }) {
+    const handleClick = (e) => {
+        e.preventDefault()
+        const section = document.getElementById(sectionId)
+        if (section) {
+            section.scrollIntoView({ behavior: "smooth" })
+        }
+        if (onClick) onClick(e)
+    }
+
+    return (
+        <a href={`#${sectionId}`} className={className} onClick={handleClick}>
+            {children}
+        </a>
+    )
+}
+
 // HomePage Component
 function HomePage({ projects, technicalSkills, personalSkills, personalInfo, socialLinks }) {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -349,9 +364,9 @@ function HomePage({ projects, technicalSkills, personalSkills, personalInfo, soc
                         <ul className="nav-list">
                             {["About", "Projects", "Skills", "Contact"].map((item) => (
                                 <li key={item}>
-                                    <a href={`#${item.toLowerCase()}`} className="nav-link">
+                                    <ScrollToSection sectionId={item.toLowerCase()} className="nav-link">
                                         {item}
-                                    </a>
+                                    </ScrollToSection>
                                 </li>
                             ))}
                         </ul>
@@ -370,9 +385,13 @@ function HomePage({ projects, technicalSkills, personalSkills, personalInfo, soc
                         <ul className="mobile-nav-list">
                             {["About", "Projects", "Skills", "Contact"].map((item) => (
                                 <li key={item}>
-                                    <a href={`#${item.toLowerCase()}`} className="mobile-nav-link" onClick={toggleMobileMenu}>
+                                    <ScrollToSection
+                                        sectionId={item.toLowerCase()}
+                                        className="mobile-nav-link"
+                                        onClick={toggleMobileMenu}
+                                    >
                                         {item}
-                                    </a>
+                                    </ScrollToSection>
                                 </li>
                             ))}
                         </ul>
@@ -407,15 +426,15 @@ function HomePage({ projects, technicalSkills, personalSkills, personalInfo, soc
                         </p>
 
                         <div className="hero-buttons">
-                            <a href="#contact" className="primary-button">
+                            <ScrollToSection sectionId="contact" className="primary-button">
                 <span className="button-content">
                   Contact Me
                   <Icons.ArrowRight className="button-icon" />
                 </span>
-                            </a>
-                            <a href="#projects" className="secondary-button">
+                            </ScrollToSection>
+                            <ScrollToSection sectionId="projects" className="secondary-button">
                                 View Work
-                            </a>
+                            </ScrollToSection>
                         </div>
                     </div>
                 </section>
@@ -454,8 +473,7 @@ function HomePage({ projects, technicalSkills, personalSkills, personalInfo, soc
                                     ))}
                                 </div>
 
-                                <div className="about-actions">
-                                </div>
+                                <div className="about-actions"></div>
                             </div>
                         </div>
                     </div>
@@ -624,18 +642,16 @@ function HomePage({ projects, technicalSkills, personalSkills, personalInfo, soc
                             </div>
 
                             <div className="footer-links">
-                                <a href="#about" className="footer-link" aria-label="Go to About section">
-                                    About
-                                </a>
-                                <a href="#projects" className="footer-link" aria-label="Go to Projects section">
-                                    Projects
-                                </a>
-                                <a href="#skills" className="footer-link" aria-label="Go to Skills section">
-                                    Skills
-                                </a>
-                                <a href="#contact" className="footer-link" aria-label="Go to Contact section">
-                                    Contact
-                                </a>
+                                {["About", "Projects", "Skills", "Contact"].map((item) => (
+                                    <ScrollToSection
+                                        key={item}
+                                        sectionId={item.toLowerCase()}
+                                        className="footer-link"
+                                        aria-label={`Go to ${item} section`}
+                                    >
+                                        {item}
+                                    </ScrollToSection>
+                                ))}
                             </div>
                         </div>
 
