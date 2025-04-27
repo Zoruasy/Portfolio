@@ -14,7 +14,8 @@
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^4.4.1",
-    "gh-pages": "^6.3.0"
+    "gh-pages": "^6.3.0",
+    "vite-plugin-gh-pages": "^1.0.1"
   },
   "homepage": "https://zoruasy.github.io/portfolio/"
 }
