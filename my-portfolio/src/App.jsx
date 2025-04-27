@@ -1,8 +1,8 @@
 "use client"
 
 import React from "react"
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 
+import { HashRouter as Router, Routes, Route, Link } from "react-router-dom"
 import { useState } from "react"
 import TypewriterLoop from "./TypewriterLoop"
 import ProjectDetail from "./ProjectDetail"
@@ -257,15 +257,15 @@ function ProjectCard({ project }) {
         // Stuur elk project naar zijn eigen specifieke pagina
         switch (project.id) {
             case 1:
-                return "/poseGame"
+                return "/PoseGame"
             case 2:
-                return "/pokemon"
+                return "/Pokemon"
             case 3:
-                return "/vacancy"
+                return "/Vacancy"
             case 4:
-                return "/uEVR"
+                return "/UEVR"
             case 5:
-                return "/backrooms"
+                return "/Backrooms"
             default:
                 return `/project/${project.id}`
         }
@@ -455,9 +455,6 @@ function HomePage({ projects, technicalSkills, personalSkills, personalInfo, soc
                                 </div>
 
                                 <div className="about-actions">
-                                    <a href="/resume.pdf" className="resume-button" aria-label="Download my resume">
-                                        Download CV
-                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -766,10 +763,9 @@ function App() {
                 <Route path="/pokemon" element={<Pokemon />} />
                 <Route path="/posegame" element={<Posegame />} />
                 <Route path="/vacancy" element={<Vacancyweb />} />
-                <Route path="/uEVR" element={<UEVR />} />
-                <Route path="/backrooms" element={<Backrooms />} />
+                <Route path="/UEVR" element={<UEVR />} />
+                <Route path="/Backrooms" element={<Backrooms />} />
             </Routes>
-
         </Router>
     )
 }
