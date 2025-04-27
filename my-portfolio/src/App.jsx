@@ -381,7 +381,7 @@ function HomePage({ projects, technicalSkills, personalSkills, personalInfo, soc
 
                 {/* Hero Section */}
                 <section className="hero-section" aria-labelledby="hero-heading">
-                    <img src="giphy.gif" alt="Retro sparkles" className="header-gif" />
+                    <img src="../public/giphy.gif" alt="Retro sparkles" className="header-gif" />
                     <div className="hero-content">
                         <h1 id="hero-heading" className="hero-title">
                             Britney Krabbendam
