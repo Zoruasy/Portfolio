@@ -1,7 +1,7 @@
 "use client"
 
 import React from "react"
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { useState } from "react"
 import TypewriterLoop from "./TypewriterLoop"
 import ProjectDetail from "./ProjectDetail"
@@ -256,15 +256,15 @@ function ProjectCard({ project }) {
         // Stuur elk project naar zijn eigen specifieke pagina
         switch (project.id) {
             case 1:
-                return "/PoseGame"
+                return "/poseGame"
             case 2:
-                return "/Pokemon"
+                return "/pokemon"
             case 3:
-                return "/Vacancy"
+                return "/vacancy"
             case 4:
-                return "/UEVR"
+                return "/uEVR"
             case 5:
-                return "/Backrooms"
+                return "/backrooms"
             default:
                 return `/project/${project.id}`
         }
@@ -765,12 +765,12 @@ function App() {
                 <Route path="/pokemon" element={<Pokemon />} />
                 <Route path="/posegame" element={<Posegame />} />
                 <Route path="/vacancy" element={<Vacancyweb />} />
-                <Route path="/UEVR" element={<UEVR />} />
-                <Route path="/Backrooms" element={<Backrooms />} />
+                <Route path="/uEVR" element={<UEVR />} />
+                <Route path="/backrooms" element={<Backrooms />} />
             </Routes>
 
         </Router>
-    )//
+    )
 }
 
 export default App
