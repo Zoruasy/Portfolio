@@ -27,7 +27,7 @@ const Pokemon = () => {
                 <div className="project-detail-image-container">
                     <div className="project-detail-image">
                         <div className="project-detail-image">
-                            <img src="public/portfolio2.jpg"/>
+                            <img src="src/img/portfolio2.jpg"/>
                         </div>
                     </div>
                 </div>

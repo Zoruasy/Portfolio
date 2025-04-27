@@ -27,7 +27,7 @@ const UEBackrooms = () => {
                 <div className="project-detail-image-container">
                     <div className="project-detail-image">
                         <div className="project-detail-image">
-                            <img src="public/backroom.gif"/>
+                            <img src="src/img/backroom.gif"/>
                         </div>
 
                     </div>
