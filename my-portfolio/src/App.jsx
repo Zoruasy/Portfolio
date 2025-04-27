@@ -1,8 +1,7 @@
-
+"use client"
 
 import React from "react"
-
-import { HashRouter as Router, Routes, Route, Link } from "react-router-dom"
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { useState } from "react"
 import TypewriterLoop from "./TypewriterLoop"
 import ProjectDetail from "./ProjectDetail"
@@ -455,6 +454,9 @@ function HomePage({ projects, technicalSkills, personalSkills, personalInfo, soc
                                 </div>
 
                                 <div className="about-actions">
+                                    <a href="/resume.pdf" className="resume-button" aria-label="Download my resume">
+                                        Download CV
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -624,16 +626,16 @@ function HomePage({ projects, technicalSkills, personalSkills, personalInfo, soc
                             </div>
 
                             <div className="footer-links">
-                                <a href="#About" className="footer-link" aria-label="Go to About section">
+                                <a href="#about" className="footer-link" aria-label="Go to About section">
                                     About
                                 </a>
-                                <a href="#Projects" className="footer-link" aria-label="Go to Projects section">
+                                <a href="#projects" className="footer-link" aria-label="Go to Projects section">
                                     Projects
                                 </a>
-                                <a href="#Skills" className="footer-link" aria-label="Go to Skills section">
+                                <a href="#skills" className="footer-link" aria-label="Go to Skills section">
                                     Skills
                                 </a>
-                                <a href="#Contact" className="footer-link" aria-label="Go to Contact section">
+                                <a href="#contact" className="footer-link" aria-label="Go to Contact section">
                                     Contact
                                 </a>
                             </div>
