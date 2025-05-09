@@ -1,3 +1,4 @@
+"use client"
 
 import React from "react"
 import { useEffect } from "react"
@@ -11,7 +12,6 @@ import Posegame from "./PoseGame.jsx"
 import Vacancyweb from "./Vacancyweb.jsx"
 import UEVR from "./UEVR.jsx"
 import Backrooms from "./Backrooms.jsx"
-
 
 // Icons
 const Icons = {
@@ -353,10 +353,10 @@ function HomePage({ projects, technicalSkills, personalSkills, personalInfo, soc
                                         href={`#${item.toLowerCase()}`}
                                         className="nav-link"
                                         onClick={(e) => {
-                                            e.preventDefault();
-                                            const section = document.getElementById(item.toLowerCase());
+                                            e.preventDefault()
+                                            const section = document.getElementById(item.toLowerCase())
                                             if (section) {
-                                                section.scrollIntoView({ behavior: "smooth" });
+                                                section.scrollIntoView({ behavior: "smooth" })
                                             }
                                         }}
                                     >
@@ -366,7 +366,6 @@ function HomePage({ projects, technicalSkills, personalSkills, personalInfo, soc
                             ))}
                         </ul>
                     </nav>
-
                 </header>
 
                 {/* Mobile Menu */}
@@ -401,11 +400,11 @@ function HomePage({ projects, technicalSkills, personalSkills, personalInfo, soc
                         <div className="hero-subtitle-container">
                             <TypewriterLoop
                                 texts={[
-                                    "Game & Web Developer",
-                                    "React Enthusiast",
-                                    "Frontend & UI Lover",
-                                    "Pokémon Plushie Collector",
+                                    "Frontend Developer",
+                                    "Web Developer",
+                                    "Game Developer",
                                     "Gamer",
+                                    "Pokemon plushie collector",
                                 ]}
                                 speed={80}
                                 pause={2000}
@@ -413,26 +412,31 @@ function HomePage({ projects, technicalSkills, personalSkills, personalInfo, soc
                         </div>
 
                         <p className="hero-description">
-                            A driven student developer with a fascination for both the dynamic world of gaming and the creative
-                            possibilities of web development.
+                           Hi, i'm Britney. An Aspiring developer passionate about building meaningful, interactive web experiences — with a keen interest in the world of game design.
                         </p>
 
                         <div className="hero-buttons">
-                            <a href="#/contact" className="primary-button"
+                            <a
+                                href="#/contact"
+                                className="primary-button"
                                 onClick={(e) => {
-                                e.preventDefault();
-                                document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
-                            }}>
+                                    e.preventDefault()
+                                    document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })
+                                }}
+                            >
                 <span className="button-content">
                   Contact Me
                   <Icons.ArrowRight className="button-icon" />
                 </span>
                             </a>
-                            <a href="#projects" className="secondary-button"
-                               onClick={(e) => {
-                                   e.preventDefault();
-                                   document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });
-                               }}>
+                            <a
+                                href="#projects"
+                                className="secondary-button"
+                                onClick={(e) => {
+                                    e.preventDefault()
+                                    document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" })
+                                }}
+                            >
                                 View Work
                             </a>
                         </div>
@@ -455,13 +459,13 @@ function HomePage({ projects, technicalSkills, personalSkills, personalInfo, soc
                             <div className="about-text">
                                 <h3 className="about-heading">Hey!</h3>
                                 <p className="about-paragraph">
-                                    Currently studying Creative media and Game technologies, I focus on web & game development using
-                                    modern technologies.
+                                   I'm currently studying Creative Media and Game Technologies at Hogeschool Rotterdam, I primarily focus on web development using
+                                    modern frontend technologies like React, JavaScript, Laravel and responsive design principles!
                                 </p>
                                 <p className="about-paragraph">
-                                    I have a strong enthusiasm for both web development and the immersive worlds of gaming. I am committed
-                                    to continuous learning and applying new skills to create compelling and user-friendly digital
-                                    experiences across both platforms.
+                                    I have a strong enthusiasm for creating intuitive user interfaces and responsive web applications. My
+                                    goal is to build accessible, performant websites that provide exceptional user experiences. While web
+                                    development is my main focus, I also enjoy exploring game development as a creative outlet! :)
                                 </p>
 
                                 <div className="about-info-grid">
@@ -473,8 +477,7 @@ function HomePage({ projects, technicalSkills, personalSkills, personalInfo, soc
                                     ))}
                                 </div>
 
-                                <div className="about-actions">
-                                </div>
+                                <div className="about-actions"></div>
                             </div>
                         </div>
                     </div>
@@ -490,7 +493,7 @@ function HomePage({ projects, technicalSkills, personalSkills, personalInfo, soc
                                 My Projects
                             </h2>
                             <div className="section-title-underline"></div>
-                            <p className="section-description">Here are some of my recent projects.</p>
+                            <p className="section-description">Here are some of my recent projects, you can find more projects on my Github!.</p>
                         </div>
 
                         <div className="projects-grid">
@@ -639,39 +642,49 @@ function HomePage({ projects, technicalSkills, personalSkills, personalInfo, soc
                                 <p className="footer-logo">
                                     <span className="footer-logo-text">BK</span>
                                 </p>
-                                <p className="footer-tagline">Web & Game Developer</p>
+                                <p className="footer-tagline">Frontend & Web Developer</p>
                             </div>
 
                             <div className="footer-links">
-                                <a href="#about" onClick={(e) => {
-                                    e.preventDefault();
-                                    document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' });
-                                }}>
+                                <a
+                                    href="#about"
+                                    onClick={(e) => {
+                                        e.preventDefault()
+                                        document.getElementById("about")?.scrollIntoView({ behavior: "smooth" })
+                                    }}
+                                >
                                     About
                                 </a>
 
-                                <a href="#projects" onClick={(e) => {
-                                    e.preventDefault();
-                                    document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });
-                                }}>
+                                <a
+                                    href="#projects"
+                                    onClick={(e) => {
+                                        e.preventDefault()
+                                        document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" })
+                                    }}
+                                >
                                     Projects
                                 </a>
 
-                                <a href="#skills" onClick={(e) => {
-                                    e.preventDefault();
-                                    document.getElementById('skills')?.scrollIntoView({ behavior: 'smooth' });
-                                }}>
+                                <a
+                                    href="#skills"
+                                    onClick={(e) => {
+                                        e.preventDefault()
+                                        document.getElementById("skills")?.scrollIntoView({ behavior: "smooth" })
+                                    }}
+                                >
                                     Skills
                                 </a>
 
-                                <a href="#contact" onClick={(e) => {
-                                    e.preventDefault();
-                                    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
-                                }}>
+                                <a
+                                    href="#contact"
+                                    onClick={(e) => {
+                                        e.preventDefault()
+                                        document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })
+                                    }}
+                                >
                                     Contact
                                 </a>
-
-
                             </div>
                         </div>
 
@@ -688,14 +701,14 @@ function HomePage({ projects, technicalSkills, personalSkills, personalInfo, soc
 // Technical skills data
 const technicalSkills = [
     { name: "HTML", icon: "H", level: 90 },
-    { name: "CSS", icon: "C", level: 80 },
-    { name: "JavaScript + React", icon: "JS", level: 75 },
-    { name: "Unreal Engine", icon: "U", level: 60 },
-    { name: "Blender", icon: "B", level: 35 },
-    { name: "Tailwind CSS", icon: "T", level: 65 },
+    { name: "CSS", icon: "C", level: 85 },
+    { name: "JavaScript", icon: "JS", level: 80 },
+    { name: "React", icon: "R", level: 75 },
+    { name: "Tailwind CSS", icon: "T", level: 70 },
     { name: "Git", icon: "G", level: 80 },
     { name: "Figma", icon: "F", level: 65 },
     { name: "PHP + Laravel", icon: "P", level: 65 },
+    { name: "Unreal Engine", icon: "U", level: 60 },
 ]
 
 // Personal skills data
